@@ -12,7 +12,7 @@
 	http://www.springframework.org/schema/tx
 	http://www.springframework.org/schema/tx/spring-tx-3.0.xsd"
 	default-autowire="byName">
-	<!-- 导入外部属性文件 -->
+	<!-- 导入外部属性文asdasdasdasd件 -->
 	
 	<context:property-placeholder location="classpath:jdbc.properties" />	
 	<!-- 注释扫描 -->
