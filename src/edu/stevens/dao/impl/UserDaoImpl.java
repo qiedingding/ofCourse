@@ -78,6 +78,27 @@ public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
 		return f;
 	}
 
+	public User findByUserNameAndPwd(final User user) {
+		User u=(User) super.getHibernateTemplate().execute(new HibernateCallback() {
+
+			public Object doInHibernate(Session session)
+					throws HibernateException, SQLException {
+				// TODO Auto-generated method stub
+				String hql="from User as c where c.userName='"+user.getUserName()+"'" +
+						" and c.userPwd='"+user.getUserPwd()+"'";
+				System.out.println(hql);
+				Query query=session.createQuery(hql);
+				List result=query.list();
+				if (result.size()>0) {
+					return result.get(0);
+				} else {
+					return null;
+				}
+			}			
+		});
+		return u;
+	}
+
 	
 
 }
