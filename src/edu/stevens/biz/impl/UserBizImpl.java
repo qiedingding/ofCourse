@@ -48,6 +48,10 @@ public class UserBizImpl implements UserBiz{
 
 		return userDao.validate_user(user);
 	}
+	public User login(User user) {
+		// TODO Auto-generated method stub
+		return userDao.findByUserNameAndPwd(user);
+	}
 
 
 
