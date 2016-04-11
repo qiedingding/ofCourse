@@ -24,11 +24,22 @@ public class User implements java.io.Serializable {
 	private String email;
 	private String tel;
 	private String address;
-	private Integer collectionId;
-	private Integer commentId;
 	private String registerTime;
 	private String lastLoginTime;
 	private String lastLoginIp;
+	private String icon;
+	private Integer major;
+	private Integer degree;
+	private Integer school;
+	private String intro;
+	private Integer nation;
+	private String intrests;
+	private String enroll;
+	private String wechat;
+	private String facebook;
+	private String birthday;
+	private Integer collectionId;
+	private Integer commentId;
 	private Integer rateId;
 
 	// Constructors
@@ -47,9 +58,11 @@ public class User implements java.io.Serializable {
 	/** full constructor */
 	public User(String userName, String userPwd, Integer userType,
 			Integer gender, Integer age, String email, String tel,
-			String address, Integer collectionId, Integer commentId,
-			String registerTime, String lastLoginTime, String lastLoginIp,
-			Integer rateId) {
+			String address, String registerTime, String lastLoginTime,
+			String lastLoginIp, String icon, Integer major, Integer degree,
+			Integer school, String intro, Integer nation, String intrests,
+			String enroll, String wechat, String facebook, String birthday,
+			Integer collectionId, Integer commentId, Integer rateId) {
 		this.userName = userName;
 		this.userPwd = userPwd;
 		this.userType = userType;
@@ -58,11 +71,22 @@ public class User implements java.io.Serializable {
 		this.email = email;
 		this.tel = tel;
 		this.address = address;
-		this.collectionId = collectionId;
-		this.commentId = commentId;
 		this.registerTime = registerTime;
 		this.lastLoginTime = lastLoginTime;
 		this.lastLoginIp = lastLoginIp;
+		this.icon = icon;
+		this.major = major;
+		this.degree = degree;
+		this.school = school;
+		this.intro = intro;
+		this.nation = nation;
+		this.intrests = intrests;
+		this.enroll = enroll;
+		this.wechat = wechat;
+		this.facebook = facebook;
+		this.birthday = birthday;
+		this.collectionId = collectionId;
+		this.commentId = commentId;
 		this.rateId = rateId;
 	}
 
@@ -150,24 +174,6 @@ public class User implements java.io.Serializable {
 		this.address = address;
 	}
 
-	@Column(name = "collectionId")
-	public Integer getCollectionId() {
-		return this.collectionId;
-	}
-
-	public void setCollectionId(Integer collectionId) {
-		this.collectionId = collectionId;
-	}
-
-	@Column(name = "commentId")
-	public Integer getCommentId() {
-		return this.commentId;
-	}
-
-	public void setCommentId(Integer commentId) {
-		this.commentId = commentId;
-	}
-
 	@Column(name = "registerTime")
 	public String getRegisterTime() {
 		return this.registerTime;
@@ -193,6 +199,123 @@ public class User implements java.io.Serializable {
 
 	public void setLastLoginIp(String lastLoginIp) {
 		this.lastLoginIp = lastLoginIp;
+	}
+
+	@Column(name = "icon")
+	public String getIcon() {
+		return this.icon;
+	}
+
+	public void setIcon(String icon) {
+		this.icon = icon;
+	}
+
+	@Column(name = "major")
+	public Integer getMajor() {
+		return this.major;
+	}
+
+	public void setMajor(Integer major) {
+		this.major = major;
+	}
+
+	@Column(name = "degree")
+	public Integer getDegree() {
+		return this.degree;
+	}
+
+	public void setDegree(Integer degree) {
+		this.degree = degree;
+	}
+
+	@Column(name = "school")
+	public Integer getSchool() {
+		return this.school;
+	}
+
+	public void setSchool(Integer school) {
+		this.school = school;
+	}
+
+	@Column(name = "intro")
+	public String getIntro() {
+		return this.intro;
+	}
+
+	public void setIntro(String intro) {
+		this.intro = intro;
+	}
+
+	@Column(name = "nation")
+	public Integer getNation() {
+		return this.nation;
+	}
+
+	public void setNation(Integer nation) {
+		this.nation = nation;
+	}
+
+	@Column(name = "intrests")
+	public String getIntrests() {
+		return this.intrests;
+	}
+
+	public void setIntrests(String intrests) {
+		this.intrests = intrests;
+	}
+
+	@Column(name = "enroll")
+	public String getEnroll() {
+		return this.enroll;
+	}
+
+	public void setEnroll(String enroll) {
+		this.enroll = enroll;
+	}
+
+	@Column(name = "wechat")
+	public String getWechat() {
+		return this.wechat;
+	}
+
+	public void setWechat(String wechat) {
+		this.wechat = wechat;
+	}
+
+	@Column(name = "facebook")
+	public String getFacebook() {
+		return this.facebook;
+	}
+
+	public void setFacebook(String facebook) {
+		this.facebook = facebook;
+	}
+
+	@Column(name = "birthday")
+	public String getBirthday() {
+		return this.birthday;
+	}
+
+	public void setBirthday(String birthday) {
+		this.birthday = birthday;
+	}
+
+	@Column(name = "collectionId")
+	public Integer getCollectionId() {
+		return this.collectionId;
+	}
+
+	public void setCollectionId(Integer collectionId) {
+		this.collectionId = collectionId;
+	}
+
+	@Column(name = "commentId")
+	public Integer getCommentId() {
+		return this.commentId;
+	}
+
+	public void setCommentId(Integer commentId) {
+		this.commentId = commentId;
 	}
 
 	@Column(name = "rateId")
