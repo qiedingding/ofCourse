@@ -21,12 +21,12 @@ public class Course implements java.io.Serializable {
 	private Integer teacherId;
 	private String pic;
 	private String intro;
-	private Integer keywords;
+	private String keywords;
 	private Integer formOfExam;
 	private Integer session;
 	private Integer credits;
 	private Integer form;
-	private Integer url;
+	private String url;
 	private Integer core;
 	private Integer degreeId;
 
@@ -45,8 +45,8 @@ public class Course implements java.io.Serializable {
 
 	/** full constructor */
 	public Course(String name, String code, Integer teacherId, String pic,
-			String intro, Integer keywords, Integer formOfExam,
-			Integer session, Integer credits, Integer form, Integer url,
+			String intro, String keywords, Integer formOfExam,
+			Integer session, Integer credits, Integer form, String url,
 			Integer core, Integer degreeId) {
 		this.name = name;
 		this.code = code;
@@ -121,11 +121,11 @@ public class Course implements java.io.Serializable {
 	}
 
 	@Column(name = "keywords")
-	public Integer getKeywords() {
+	public String getKeywords() {
 		return this.keywords;
 	}
 
-	public void setKeywords(Integer keywords) {
+	public void setKeywords(String keywords) {
 		this.keywords = keywords;
 	}
 
@@ -166,11 +166,11 @@ public class Course implements java.io.Serializable {
 	}
 
 	@Column(name = "url")
-	public Integer getUrl() {
+	public String getUrl() {
 		return this.url;
 	}
 
-	public void setUrl(Integer url) {
+	public void setUrl(String url) {
 		this.url = url;
 	}
 
