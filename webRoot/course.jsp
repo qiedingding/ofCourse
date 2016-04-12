@@ -221,7 +221,7 @@ $(document).ready(function(){
 <!-- portfolio -->
 <div class="gallery" id="gallery">
 		<div class="container">
-			<h3>CourseName</h3>
+			<h3>${course.name}</h3>
 			
 		<div class="project-top">
 		    <div class="col-md-6 project-right"></div>
@@ -350,30 +350,17 @@ $(document).ready(function(){
 		<div class="container">
 			<h3>RecommendPart.</h3>
 			<div class="case-top">
-		  <div class="col-md-4 case-left">
+			<s:iterator value="recommendList" var="cc">
+		  	<div class="col-md-4 case-left">
 						<a href="">
 					<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
 					<div class="ca-rt">
-						<h5>Course 2 </h5>
+						<h5> <a href="findOneCourse?id=${cc.courseId}" > ${cc.name}</a> </h5>
 					</div>
                    </a>
 				</div>
-				<div class="col-md-4 case-left">
-					<a href="">
-					<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-					<div class="ca-rt">
-						<h5>Course 2 </h5>
-					</div>
-                   </a>
-				</div>
-				<div class="col-md-4 case-left1">
-						<a href="">
-					<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-					<div class="ca-rt">
-						<h5>Course 2 </h5>
-					</div>
-                   </a>
-				</div>
+				</s:iterator>
+				
 					<div class="clearfix"></div>
 			</div>
 			<!-- specifications -->

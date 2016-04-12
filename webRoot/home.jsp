@@ -175,42 +175,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div id="portfoliolist">
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-							 <a href="course.jsp" > <img src="images/pic9.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+							 <a href="findOneCourse?id=100001" > <img src="images/pic9.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>				
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-								 <a href="course.jsp" >  <img src="images/pic8.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+								 <a href="findOneCourse?id=100002" >  <img src="images/pic8.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>					
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-								 <a href="course.jsp" >  <img src="images/pic3.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+								<a href="findOneCourse?id=100003" >  <img src="images/pic3.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-								 <a href="course.jsp" >  <img src="images/pic4.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+								 <a href="findOneCourse?id=100004" >   <img src="images/pic4.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>		
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-							 	 <a href="course.jsp" >  <img src="images/pic5.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+							 	<a href="findOneCourse?id=100005" >   <img src="images/pic5.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>	
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-							 	 <a href="course.jsp" > <img src="images/pic6.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+							 	<a href="findOneCourse?id=100006" >  <img src="images/pic6.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>	
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-								 <a href="course.jsp" >  <img src="images/pic7.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+								<a href="findOneCourse?id=100007" >   <img src="images/pic7.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-								 <a href="course.jsp" >  <img src="images/pic1.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+								 <a href="findOneCourse?id=100000" >  <img src="images/pic1.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>
 				<div class="clearfix"></div>					
@@ -421,9 +421,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<span class="glyphicon glyphicon-envelope" aria-hidden="true">
 					</div>
 					<h4>Email</h4>
-					<p>Emai-1 : <a href="mailto:info@example.com">xli100@stevens.edu</a> </p>
-					<p>Emai-2 : <a href="mailto:info@example.com">sblyr@stevens.edu</a> </p>
-					<p>Emai-3 : <a href="mailto:info@example.com">sbxhy@stevens.edu</a> </p>
+					<p>Emai-1 : <a href="mailto:xli100@stevens.edu">xli100@stevens.edu</a> </p>
+					<p>Emai-2 : <a href="mailto:sblyr@stevens.edu">sblyr@stevens.edu</a> </p>
+					<p>Emai-3 : <a href="mailto:sbxhy@stevens.edu">sbxhy@stevens.edu</a> </p>
 				</div>
 				<div class="clearfix"></div>
 			
