@@ -12,19 +12,38 @@ import com.opensymphony.xwork2.ActionSupport;
 
 import edu.stevens.biz.CourseBiz;
 import edu.stevens.biz.CustomBiz;
+import edu.stevens.entity.Course;
 import edu.stevens.entity.Custom;
 
 @Controller("courseAction")
 public class CourseAction extends ActionSupport {
 
 	private ArrayList list;
+	private ArrayList recommendList;
 	private int id;
+	private Course course;
 	@Autowired
 	@Qualifier("courseBiz")
 	private CourseBiz courseBiz;
 
 
 
+
+	public ArrayList getRecommendList() {
+		return recommendList;
+	}
+
+	public void setRecommendList(ArrayList recommendList) {
+		this.recommendList = recommendList;
+	}
+
+	public Course getCourse() {
+		return course;
+	}
+
+	public void setCourse(Course course) {
+		this.course = course;
+	}
 
 	public int getId() {
 		return id;
@@ -58,13 +77,13 @@ public class CourseAction extends ActionSupport {
 			list = courseBiz.findAll();
 			return "success";
 	}
-		
-		@Action(value = "findTeahcerId" ,results = {
-				@Result(name = "success",location="update.jsp")})
-		public String findTeahcerId() {
-			
-			list = courseBiz.findTeahcerId(id);
+		@Action(value = "findOneCourse" ,results = {
+				@Result(name = "success",location="course.jsp")})
+		public String findOneCourse() {
+			course = courseBiz.findById(id);
+			recommendList = courseBiz.recommend(course);
 			return "success";
 	}
+		
 
 }
