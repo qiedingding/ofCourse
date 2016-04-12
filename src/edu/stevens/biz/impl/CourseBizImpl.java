@@ -52,9 +52,12 @@ public class CourseBizImpl implements CourseBiz{
 	public ArrayList findTeahcerId(int id) {
 		return courseDao.findTeahcerId(id);
 	}
-	public ArrayList recommend(Course course) {
-		// TODO Auto-generated method stub
-		return null;
+	public ArrayList<Course> recommend(Course course) {
+		ArrayList<Course> list = new ArrayList<Course>();
+		list.add(course);
+		list.add(course);
+		list.add(course);
+		return list;
 	}
 
 
