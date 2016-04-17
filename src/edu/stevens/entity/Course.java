@@ -192,4 +192,113 @@ public class Course implements java.io.Serializable {
 		this.degreeId = degreeId;
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((code == null) ? 0 : code.hashCode());
+		result = prime * result + ((core == null) ? 0 : core.hashCode());
+		result = prime * result
+				+ ((courseId == null) ? 0 : courseId.hashCode());
+		result = prime * result + ((credits == null) ? 0 : credits.hashCode());
+		result = prime * result
+				+ ((degreeId == null) ? 0 : degreeId.hashCode());
+		result = prime * result + ((form == null) ? 0 : form.hashCode());
+		result = prime * result
+				+ ((formOfExam == null) ? 0 : formOfExam.hashCode());
+		result = prime * result + ((intro == null) ? 0 : intro.hashCode());
+		result = prime * result
+				+ ((keywords == null) ? 0 : keywords.hashCode());
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((pic == null) ? 0 : pic.hashCode());
+		result = prime * result + ((session == null) ? 0 : session.hashCode());
+		result = prime * result
+				+ ((teacherId == null) ? 0 : teacherId.hashCode());
+		result = prime * result + ((url == null) ? 0 : url.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Course other = (Course) obj;
+		if (code == null) {
+			if (other.code != null)
+				return false;
+		} else if (!code.equals(other.code))
+			return false;
+		if (core == null) {
+			if (other.core != null)
+				return false;
+		} else if (!core.equals(other.core))
+			return false;
+		if (courseId == null) {
+			if (other.courseId != null)
+				return false;
+		} else if (!courseId.equals(other.courseId))
+			return false;
+		if (credits == null) {
+			if (other.credits != null)
+				return false;
+		} else if (!credits.equals(other.credits))
+			return false;
+		if (degreeId == null) {
+			if (other.degreeId != null)
+				return false;
+		} else if (!degreeId.equals(other.degreeId))
+			return false;
+		if (form == null) {
+			if (other.form != null)
+				return false;
+		} else if (!form.equals(other.form))
+			return false;
+		if (formOfExam == null) {
+			if (other.formOfExam != null)
+				return false;
+		} else if (!formOfExam.equals(other.formOfExam))
+			return false;
+		if (intro == null) {
+			if (other.intro != null)
+				return false;
+		} else if (!intro.equals(other.intro))
+			return false;
+		if (keywords == null) {
+			if (other.keywords != null)
+				return false;
+		} else if (!keywords.equals(other.keywords))
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (pic == null) {
+			if (other.pic != null)
+				return false;
+		} else if (!pic.equals(other.pic))
+			return false;
+		if (session == null) {
+			if (other.session != null)
+				return false;
+		} else if (!session.equals(other.session))
+			return false;
+		if (teacherId == null) {
+			if (other.teacherId != null)
+				return false;
+		} else if (!teacherId.equals(other.teacherId))
+			return false;
+		if (url == null) {
+			if (other.url != null)
+				return false;
+		} else if (!url.equals(other.url))
+			return false;
+		return true;
+	}
+	
+
 }
