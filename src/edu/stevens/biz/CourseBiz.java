@@ -5,6 +5,7 @@ import java.util.List;
 
 import edu.stevens.entity.Course;
 import edu.stevens.entity.Custom;
+import edu.stevens.entity.User;
 
 public interface CourseBiz {
 	public ArrayList findAll();
@@ -13,6 +14,6 @@ public interface CourseBiz {
 	public boolean update(Course course);
 	public boolean delete(Course course);
 	public boolean insert(Course course);
-	public ArrayList recommend(Course course);
+	public ArrayList recommend(Course course  ,User user);
 	
 }
