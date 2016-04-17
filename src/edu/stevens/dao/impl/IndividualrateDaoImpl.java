@@ -37,10 +37,30 @@ public class IndividualrateDaoImpl extends HibernateDaoSupport implements Indivi
 			public Object doInHibernate(Session session)
 					throws HibernateException, SQLException {
 				// TODO Auto-generated method stub
-				String hql="from Individualrate as c where c.id="+id;
+				String hql="from Individualrate as c where c.rateId="+id;
 				Query query=session.createQuery(hql);
 				List result=query.list();
 				if (result.size()>0) {
+					return result.get(0);
+				} else {
+					return null;
+				}
+			}			
+		});
+		return f;
+	}
+
+	public Individualrate findByUserIdAndCourseId(final int userId,final int courseId) {
+		Individualrate f=(Individualrate) super.getHibernateTemplate().execute(new HibernateCallback() {
+
+			public Object doInHibernate(Session session)
+					throws HibernateException, SQLException {
+				// TODO Auto-generated method stub
+				String hql="from Individualrate as c where c.courseId="+courseId+"and c.userId="+userId;
+				Query query=session.createQuery(hql);
+				List result=query.list();
+				if (result.size()>0) {
+					//System.out.println(result.size()+" "+userId+" "+courseId);
 					return result.get(0);
 				} else {
 					return null;
@@ -65,6 +85,44 @@ public class IndividualrateDaoImpl extends HibernateDaoSupport implements Indivi
 	public boolean insert(Individualrate f) {
 		super.getHibernateTemplate().save(f);
 		return true;
+	}
+
+	public ArrayList findByUserId(final int id) {
+		ArrayList<Individualrate> list=(ArrayList<Individualrate>)super.getHibernateTemplate().execute(new HibernateCallback() {
+
+			public Object doInHibernate(Session session)
+					throws HibernateException, SQLException {
+				// TODO Auto-generated method stub
+				String hql="from Individualrate as c where c.userId="+id;
+				Query query=session.createQuery(hql);
+				List result=query.list();
+				if (result.size()>0) {
+					return result;
+				} else {
+					return null;
+				}
+			}			
+		});
+		return list;
+	}
+
+	public ArrayList findByCourseId(final int courseId) {
+		ArrayList f=(ArrayList) super.getHibernateTemplate().execute(new HibernateCallback() {
+
+			public Object doInHibernate(Session session)
+					throws HibernateException, SQLException {
+				// TODO Auto-generated method stub
+				String hql="from Individualrate as c where c.courseId="+courseId;
+				Query query=session.createQuery(hql);
+				List result=query.list();
+				if (result.size()>0) {
+					return result;
+				} else {
+					return result;
+				}
+			}			
+		});
+		return f;
 	}
 
 
