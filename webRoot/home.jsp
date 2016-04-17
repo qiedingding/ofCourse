@@ -175,42 +175,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div id="portfoliolist">
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-							 <a href="findOneCourse?id=100001" > <img src="images/pic9.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+							 <a href="findOneCourse?id=1" > <img src="images/pic9.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>				
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-								 <a href="findOneCourse?id=100002" >  <img src="images/pic8.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+								 <a href="findOneCourse?id=2" >  <img src="images/pic8.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>					
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-								<a href="findOneCourse?id=100003" >  <img src="images/pic3.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+								<a href="findOneCourse?id=3" >  <img src="images/pic3.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-								 <a href="findOneCourse?id=100004" >   <img src="images/pic4.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+								 <a href="findOneCourse?id=4" >   <img src="images/pic4.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>		
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-							 	<a href="findOneCourse?id=100005" >   <img src="images/pic5.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+							 	<a href="findOneCourse?id=5" >   <img src="images/pic5.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>	
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-							 	<a href="findOneCourse?id=100006" >  <img src="images/pic6.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+							 	<a href="findOneCourse?id=6" >  <img src="images/pic6.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>	
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-								<a href="findOneCourse?id=100007" >   <img src="images/pic7.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+								<a href="findOneCourse?id=7" >   <img src="images/pic7.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-								 <a href="findOneCourse?id=100000" >  <img src="images/pic1.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+								 <a href="findOneCourse?id=8" >  <img src="images/pic1.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>
 				<div class="clearfix"></div>					

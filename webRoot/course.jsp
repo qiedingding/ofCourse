@@ -109,13 +109,13 @@ $(function(){
     step: 1,
     title: "radiaChar",
     values: {
-      "JavaScript": 4.1,
-      "Node.js": 3.5,
-      "jQuery": 4,
-      "PHP": 3,
-      "C++": 2.5,
-      "Problem Solving": 3.5,
-      "DHTML": 4
+      "xhy": 4.0,
+      "sb1": 3.5,
+      "xhy1": 4,
+      "sb2": 3,
+      "xhy2": 2.5,
+      "sb3": 3.5,
+      "sb4": 4
     },
     showAxisLabels: true
   });
