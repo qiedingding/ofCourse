@@ -3,6 +3,10 @@ package edu.stevens.action;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -88,6 +92,9 @@ public class UserAction extends ActionSupport {
 			message = "your userName or password error, please try again";
 			return "fail";
 		}
+		HttpServletRequest request = ServletActionContext.getRequest();  
+		HttpSession session = request.getSession();  
+		session.setAttribute("currentUser", u);
 		return "success";
 	}
 

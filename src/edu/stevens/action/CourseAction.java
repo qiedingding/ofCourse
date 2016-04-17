@@ -2,6 +2,11 @@ package edu.stevens.action;
 
 import java.util.ArrayList;
 
+import javax.jms.Session;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +19,7 @@ import edu.stevens.biz.CourseBiz;
 import edu.stevens.biz.CustomBiz;
 import edu.stevens.entity.Course;
 import edu.stevens.entity.Custom;
+import edu.stevens.entity.User;
 
 @Controller("courseAction")
 public class CourseAction extends ActionSupport {
@@ -81,7 +87,10 @@ public class CourseAction extends ActionSupport {
 				@Result(name = "success",location="course.jsp")})
 		public String findOneCourse() {
 			course = courseBiz.findById(id);
-			recommendList = courseBiz.recommend(course);
+			HttpServletRequest request = ServletActionContext.getRequest();  
+			HttpSession session = request.getSession();  
+			User user = (User) session.getAttribute("currentUser");
+			recommendList = courseBiz.recommend(course,user);
 			return "success";
 	}
 		
