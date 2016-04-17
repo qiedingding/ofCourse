@@ -13,5 +13,7 @@ public interface IndividualrateDao {
 	public boolean update(Individualrate individualrate);
 	public boolean delete(Individualrate individualrate);
 	public boolean insert(Individualrate individualrate);
-	
+	public ArrayList findByUserId(int id);
+	public Individualrate findByUserIdAndCourseId(int userId, int courseId);
+	public ArrayList findByCourseId(int courseId);
 }
