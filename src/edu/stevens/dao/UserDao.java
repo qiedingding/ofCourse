@@ -13,5 +13,6 @@ public interface UserDao {
 	public User findByUserNameAndPwd(User user);
 	public boolean delete(User user);
 	public boolean validate_user(User user);
+	public boolean register(User user);
 	
 }

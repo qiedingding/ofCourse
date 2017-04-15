@@ -23,7 +23,6 @@ import edu.stevens.entity.Custom;
 public class CourseDaoImpl extends HibernateDaoSupport implements CourseDao {
 
 	public ArrayList findAll() {
-		System.out.println("查看所有！！！！！！！！！！！！！");
 		String hql="from Course";
 		ArrayList<Course> list=(ArrayList<Course>) super.getHibernateTemplate().find(hql);
 		return list;

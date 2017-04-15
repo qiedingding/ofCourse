@@ -17,17 +17,17 @@ public class Sumrate implements java.io.Serializable {
 
 	private Integer rateId;
 	private Integer courseId;
-	private Integer finalGrades;
-	private Integer getGoodGrades;
-	private Integer difficulty;
-	private Integer assigment;
-	private Integer pronunciation;
+	private Double finalGrades;
+	private Double getGoodGrades;
+	private Double difficulty;
+	private Double assigment;
+	private Double pronunciation;
 	private String recommendreason;
-	private Integer recommendation;
-	private Integer genderRate;
-	private Integer teacherStyle;
-	private Integer practicability;
-	private Integer number;
+	private Double recommendation;
+	private Double genderRate;
+	private Double teacherStyle;
+	private Double practicability;
+	private Double number;
 
 	// Constructors
 
@@ -36,11 +36,10 @@ public class Sumrate implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Sumrate(Integer courseId, Integer finalGrades,
-			Integer getGoodGrades, Integer difficulty, Integer assigment,
-			Integer pronunciation, String recommendreason,
-			Integer recommendation, Integer genderRate, Integer teacherStyle,
-			Integer practicability, Integer number) {
+	public Sumrate(Integer courseId, Double finalGrades, Double getGoodGrades,
+			Double difficulty, Double assigment, Double pronunciation,
+			String recommendreason, Double recommendation, Double genderRate,
+			Double teacherStyle, Double practicability, Double number) {
 		this.courseId = courseId;
 		this.finalGrades = finalGrades;
 		this.getGoodGrades = getGoodGrades;
@@ -76,48 +75,48 @@ public class Sumrate implements java.io.Serializable {
 		this.courseId = courseId;
 	}
 
-	@Column(name = "finalGrades")
-	public Integer getFinalGrades() {
+	@Column(name = "finalGrades", precision = 11, scale = 0)
+	public Double getFinalGrades() {
 		return this.finalGrades;
 	}
 
-	public void setFinalGrades(Integer finalGrades) {
+	public void setFinalGrades(Double finalGrades) {
 		this.finalGrades = finalGrades;
 	}
 
-	@Column(name = "getGoodGrades")
-	public Integer getGetGoodGrades() {
+	@Column(name = "getGoodGrades", precision = 11, scale = 0)
+	public Double getGetGoodGrades() {
 		return this.getGoodGrades;
 	}
 
-	public void setGetGoodGrades(Integer getGoodGrades) {
+	public void setGetGoodGrades(Double getGoodGrades) {
 		this.getGoodGrades = getGoodGrades;
 	}
 
-	@Column(name = "difficulty")
-	public Integer getDifficulty() {
+	@Column(name = "difficulty", precision = 11, scale = 0)
+	public Double getDifficulty() {
 		return this.difficulty;
 	}
 
-	public void setDifficulty(Integer difficulty) {
+	public void setDifficulty(Double difficulty) {
 		this.difficulty = difficulty;
 	}
 
-	@Column(name = "assigment")
-	public Integer getAssigment() {
+	@Column(name = "assigment", precision = 11, scale = 0)
+	public Double getAssigment() {
 		return this.assigment;
 	}
 
-	public void setAssigment(Integer assigment) {
+	public void setAssigment(Double assigment) {
 		this.assigment = assigment;
 	}
 
-	@Column(name = "pronunciation")
-	public Integer getPronunciation() {
+	@Column(name = "pronunciation", precision = 11, scale = 0)
+	public Double getPronunciation() {
 		return this.pronunciation;
 	}
 
-	public void setPronunciation(Integer pronunciation) {
+	public void setPronunciation(Double pronunciation) {
 		this.pronunciation = pronunciation;
 	}
 
@@ -130,48 +129,48 @@ public class Sumrate implements java.io.Serializable {
 		this.recommendreason = recommendreason;
 	}
 
-	@Column(name = "recommendation")
-	public Integer getRecommendation() {
+	@Column(name = "recommendation", precision = 11, scale = 0)
+	public Double getRecommendation() {
 		return this.recommendation;
 	}
 
-	public void setRecommendation(Integer recommendation) {
+	public void setRecommendation(Double recommendation) {
 		this.recommendation = recommendation;
 	}
 
-	@Column(name = "genderRate")
-	public Integer getGenderRate() {
+	@Column(name = "genderRate", precision = 11, scale = 0)
+	public Double getGenderRate() {
 		return this.genderRate;
 	}
 
-	public void setGenderRate(Integer genderRate) {
+	public void setGenderRate(Double genderRate) {
 		this.genderRate = genderRate;
 	}
 
-	@Column(name = "teacherStyle")
-	public Integer getTeacherStyle() {
+	@Column(name = "teacherStyle", precision = 11, scale = 0)
+	public Double getTeacherStyle() {
 		return this.teacherStyle;
 	}
 
-	public void setTeacherStyle(Integer teacherStyle) {
+	public void setTeacherStyle(Double teacherStyle) {
 		this.teacherStyle = teacherStyle;
 	}
 
-	@Column(name = "practicability")
-	public Integer getPracticability() {
+	@Column(name = "practicability", precision = 11, scale = 0)
+	public Double getPracticability() {
 		return this.practicability;
 	}
 
-	public void setPracticability(Integer practicability) {
+	public void setPracticability(Double practicability) {
 		this.practicability = practicability;
 	}
 
-	@Column(name = "number")
-	public Integer getNumber() {
+	@Column(name = "number", precision = 11, scale = 0)
+	public Double getNumber() {
 		return this.number;
 	}
 
-	public void setNumber(Integer number) {
+	public void setNumber(Double number) {
 		this.number = number;
 	}
 

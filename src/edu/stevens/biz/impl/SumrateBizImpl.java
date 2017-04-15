@@ -63,6 +63,10 @@ public class SumrateBizImpl implements SumrateBiz{
 		// TODO Auto-generated method stub
 		return sumrateDao.insert(c);
 	}
+	public Sumrate findByCourseId(int courseId) {
+		// TODO Auto-generated method stub
+		return sumrateDao.findByCourseId(courseId);
+	}
 
 
 

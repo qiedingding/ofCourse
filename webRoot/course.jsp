@@ -109,13 +109,12 @@ $(function(){
     step: 1,
     title: "radiaChar",
     values: {
-      "xhy": 4.0,
-      "sb1": 3.5,
-      "xhy1": 4,
-      "sb2": 3,
-      "xhy2": 2.5,
-      "sb3": 3.5,
-      "sb4": 4
+      getGoodGrades: ${sumrate.getGoodGrades},	
+      difficulty: ${sumrate.difficulty},
+      assigment: ${sumrate.assigment},
+      pronunciation: ${sumrate.pronunciation},
+      recommendation:${sumrate.recommendation},
+      teacherStyle:${sumrate.teacherStyle},
     },
     showAxisLabels: true
   });
@@ -136,7 +135,7 @@ $(document).ready(function(){
 			gvSettings: {
 			vAxis: {title: 'No of players'},
 			hAxis: {title: 'Month'},
-			width: 300,
+			width: 400,
 			height: 350
 		}
 	});
@@ -151,7 +150,7 @@ $(document).ready(function(){
 			gvSettings: {
 			vAxis: {title: 'No of players'},
 			hAxis: {title: 'Month'},
-			width: 300,
+			width: 400,
 			height: 350
 		}
 	});
@@ -166,7 +165,7 @@ $(document).ready(function(){
 			gvSettings: {
 			vAxis: {title: 'No of players'},
 			hAxis: {title: 'Month'},
-			width: 300,
+			width: 400,
 			height: 350
 		}
 	});
@@ -181,7 +180,7 @@ $(document).ready(function(){
 			gvSettings: {
 			vAxis: {title: 'No of players'},
 			hAxis: {title: 'Month'},
-			width: 300,
+			width: 400,
 			height: 350
 		}
 	});
@@ -192,28 +191,43 @@ $(document).ready(function(){
 
 
 </head>
-<body>
- <!-- header -->
+<body> <!-- header -->
 
 	 <!-- header-bottom -->
 	<div class="header-bottom">
 		<div class="container">
 			<nav class="navbar navbar-default" role="navigation">
-			
-                
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<!--/.navbar-header-->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-					 <li><a href="index.html" class="scroll">Major</a></li>
-						<li><a href="#services" class="scroll">Self</a></li>
-						 <li><a href="#about" class="scroll">Course</a></li>
-						<li><a href="#gallery" class="scroll">Unisersity</a></li>
-						<li><a href="#contact" class="scroll">ContactUs</a></li>
+						 <li><a href="home.jsp" >Home</a></li>
+						 <li><a href="courseListByTest">Course</a></li>
+						<li><a href="recommend.jsp">Recommend</a></li>
+						<li><a href="AboutUs.jsp">ContactUs</a></li>
+					<s:if test="null==#session.currentUser||#session.currentUser.isEmpty()">
+  							<li><a href="login.jsp" >Login</a></li>
+                        	<li><a href="register.jsp">Register</a></li>
+						</s:if>
+						<s:else>
+							<li><a href="userProfile" ><s:property value="#session.currentUser.userName" /></a></li>
+                        	<li><a href="loginOut">LogOut</a></li>
+						</s:else>
+						
+                      
 					</ul>
 				</div>
 				<!--/.navbar-collapse-->
 			</nav>
 		</div>
-	</div>
+</div>
 	<!-- /header-bottom -->
 
 <!-- header -->
@@ -221,12 +235,28 @@ $(document).ready(function(){
 <!-- portfolio -->
 <div class="gallery" id="gallery">
 		<div class="container">
-			<h3>${course.name}</h3>
+			<a href="rateACourse?id= ${course.courseId}"><h3>${course.name}</h3></a>
 			
 		<div class="project-top">
 		    <div class="col-md-6 project-right"></div>
 				<div class="col-md-6 project-left">  </div>
-					<h2><span class="col-md-6 project-right"><div id="chart"></div>
+					<h2><span class="col-md-6 project-right"><div id="chart"></div></span></h2>
+					<span class="col-md-6 project-right">					
+							<h2><p>CODE : ${course.code}</p><BR/>	</h2>
+						<h2><p><a href="findATeacher?id=${teacher.teacherId}">Teacher:${teacher.teacherName}</a></p><BR/></h2>
+						<h2>Session : <s:if test="#request.course.session == 1">Fall</s:if>
+						
+						<s:if test="#request.course.session == 2"> Spring</s:if>
+						<s:if test="#request.course.session == 3"> Fall + Spring</s:if>
+						</h2>
+						<h2><p>Credits : ${course.credits}</p><BR/></h2>
+						<h2><p>Is Core Course?:  <s:if test="#request.course.core == 1"> NO</s:if><s:if test="#request.course.core == 2"> YES</s:if></p><BR/></h2>
+						<p>
+							Introduction:${course.intro}
+						
+						</p>
+					</span>
+				
 			</div>
 		</div>
 	</div>
@@ -234,27 +264,33 @@ $(document).ready(function(){
 <!-- project -->
 	<div class="project" id="about">
 		<div class="container">
-		
+		<h1 style="text-align: center;">Statistics</h1>
 	<div class="application">
 
-<div class="col-md-3 appli-left">
+<div class="col-md-5 appli-left">
 				<div class="app-lft">
 					
 
 	 		 <table id='myTable1'>
-			<caption>会员性别分布</caption>
+			<caption>getGoodGrade</caption>
 			<thead>
 				<tr>
 					<th></th>
-					<th>男</th>
-					<th>女</th>
+					<th>wonderful</th>
+					<th>pretty good</th>
+					<th>great</th>
+					<th>good</th>
+					<th>not good</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<th>1000</th>
-					<td>450</td>
-					<td>550</td>
+					<th>100</th>
+					<td>15</td>
+					<td>20</td>
+					<td>30</td>
+					<td>15</td>
+					<td>10</td>
 					</tr>
 			</tbody>
 		</table>  
@@ -263,23 +299,29 @@ $(document).ready(function(){
 				</div>
 					<a class="hvr-shutter-in-horizontal" href="#">Read More</a>
 			</div>
-			<div class="col-md-3 appli-left">
+			<div class="col-md-5 appli-left">
 				<div class="app-lft">
 
 	 		 <table id='myTable2'>
-			<caption>会员性别分布</caption>
+			<caption>diffculty</caption>
 			<thead>
 				<tr>
-					<th></th>
-					<th>男</th>
-					<th>女</th>
+						<th></th>
+					<th>Ver hard</th>
+					<th>Hard</th>
+					<th>Midium</th>
+					<th>Easy</th>
+					<th>Very easy</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<th>1000</th>
-					<td>420</td>
-					<td>550</td>
+					<th>100</th>
+					<td>45</td>
+					<td>25</td>
+					<td>10</td>
+					<td>8</td>
+					<td>2</td>
 					</tr>
 			</tbody>
 		</table>  
@@ -288,23 +330,29 @@ $(document).ready(function(){
 				</div>
 					<a class="hvr-shutter-in-horizontal" href="#">Read More</a>
 			</div>
-			<div class="col-md-3 appli-left">
+			<div class="col-md-5 appli-left">
 				<div class="app-lft">
 
 	 		 <table id='myTable3'>
-			<caption>会员性别分布</caption>
+			<caption>assigment</caption>
 			<thead>
 				<tr>
 					<th></th>
-					<th>男</th>
-					<th>女</th>
+					<th>Too much</th>
+					<th>Much</th>
+					<th>Enough</th>
+					<th>Easy</th>
+					<th>Less or no</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<th>1000</th>
-					<td>450</td>
-					<td>550</td>
+					<th>100</th>
+					<td>15</td>
+					<td>25</td>
+					<td>30</td>
+					<td>15</td>
+					<td>2</td>
 					</tr>
 			</tbody>
 		</table>  
@@ -314,23 +362,29 @@ $(document).ready(function(){
 				</div>
 					<a class="hvr-shutter-in-horizontal" href="#">Read More</a>
 			</div>
-			<div class="col-md-3 appli-left1">
+			<div class="col-md-5 appli-left">
 				<div class="app-lft">
 
 	 		 <table id='myTable4'>
-			<caption>会员性别分布</caption>
+			<caption>recommendation</caption>
 			<thead>
 				<tr>
 					<th></th>
-					<th>男</th>
-					<th>女</th>
+					<th>Very recommend</th>
+					<th>Recommend</th>
+					<th>Just soso</th>
+					<th>For some reason you can take</th>
+					<th>Not recommend</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<th>1000</th>
-					<td>450</td>
-					<td>550</td>
+					<th>100</th>
+					<td>75</td>
+					<td>15</td>
+					<td>5</td>
+					<td>3</td>
+					<td>2</td>
 					</tr>
 			</tbody>
 		</table>  

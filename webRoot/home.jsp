@@ -115,13 +115,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<!--/.navbar-header-->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-					 <li><a href="index.html" class="scroll">Major</a></li>
-						 <li><a href="#about" class="scroll">Course</a></li>
-						<li><a href="#gallery" class="scroll">Unisersity</a></li>
-						<li><a href="#contact" class="scroll">ContactUs</a></li>
-                        <li><a href="login.jsp" >Login</a></li>
-                        <li><a href="register.jsp">Register</a></li>
-                        
+					 <li><a href="home.jsp" >Home</a></li>
+						 <li><a href="courseListByTest">Course</a></li>
+						<li><a href="recommend.jsp">Recommend</a></li>
+						<li><a href="AboutUs.jsp">ContactUs</a></li>
+					<s:if test="null==#session.currentUser||#session.currentUser.isEmpty()">
+  							<li><a href="login.jsp" >Login</a></li>
+                        	<li><a href="register.jsp">Register</a></li>
+						</s:if>
+						<s:else>
+							<li><a href="userProfile" ><s:property value="#session.currentUser.userName" /></a></li>
+                        	<li><a href="loginOut">LogOut</a></li>
+						</s:else>
+						
+                      
 					</ul>
 				</div>
 				<!--/.navbar-collapse-->
@@ -136,7 +143,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">	
 			
 			<div class="logo">
-				<h1><a href="index.html">ofCourse</a></h1>
+				<h1><a href="home.jsp">ofCourse</a></h1>
 			</div>
 			<div class="banner-info">
 				<h2>Professional</h2>
@@ -175,45 +182,48 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div id="portfoliolist">
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-							 <a href="findOneCourse?id=1" > <img src="images/pic9.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+							 <a href="findOneCourse?id=1" > <img src="images/cs501.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>				
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-								 <a href="findOneCourse?id=2" >  <img src="images/pic8.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+								 <a href="findOneCourse?id=2" >  <img src="images/cs513.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>					
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-								<a href="findOneCourse?id=3" >  <img src="images/pic3.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+								<a href="findOneCourseTest?id=3" >  <img src="images/cs545.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-								 <a href="findOneCourse?id=4" >   <img src="images/pic4.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+								 <a href="findOneCourse?id=4" >   <img src="images/cs609.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>		
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-							 	<a href="findOneCourse?id=5" >   <img src="images/pic5.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+							 	<a href="findOneCourse?id=5" >   <img src="images/cs561.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>	
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-							 	<a href="findOneCourse?id=6" >  <img src="images/pic6.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+							 	<a href="findOneCourse?id=6" >  <img src="images/cs593.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>	
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-								<a href="findOneCourse?id=7" >   <img src="images/pic7.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+								<a href="findOneCourse?id=7" >   <img src="images/cs562.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>
 					<div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">		
-								 <a href="findOneCourse?id=8" >  <img src="images/pic1.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+								 <a href="findOneCourse?id=8" >  <img src="images/cs800.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 		                </div>
 					</div>
-				<div class="clearfix"></div>					
+				
+					<button name="userInterest" style="color: black">userInterest</button>
+				
+								
 				</div>
 		  <div class="clearfix"></div>
 			</div>

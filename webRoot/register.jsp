@@ -16,7 +16,20 @@
         <link rel="stylesheet" href="assets/css/reset.css">
         <link rel="stylesheet" href="assets/css/supersized.css">
         <link rel="stylesheet" href="assets/css/style.css">
-
+<script>
+          function validate() {
+              var pw1 = document.getElementById("pw1").value;
+              var pw2 = document.getElementById("pw2").value;
+              if(pw1 == pw2) {
+                  document.getElementById("tishi").innerHTML="<font color='green'>password is same</font>";
+                  document.getElementById("submit").disabled = false;
+              }
+              else {
+                  document.getElementById("tishi").innerHTML="<font color='red'>password is different</font>";
+                document.getElementById("submit").disabled = true;
+              }
+          }
+      </script>
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -27,13 +40,13 @@
     <body>
 
         <div class="page-container">
-            <h1>Login</h1>
+            <h1>Register</h1>
             <form action="register" method="post">
                 <input type="text" name="user.userName" class="username" placeholder="email">
-                <input type="password" name="user.userPwd" class="password" placeholder="Password">
+                <input type="password" name="user.userPwd" class="password" placeholder="Password" id="pw1"><span id="tishi"></span>
                 
-                <input type="password" name="user.userPwd" class="password" placeholder="ConfirmPassword">
-                <button type="submit">Register</button>
+                <input type="password" name="user.userPwd1" class="password" placeholder="ConfirmPassword" id="pw2" onkeyup="validate()">
+                <button type="submit" id="submit">Register</button>
              </form>
                  <a href="home.jsp"><button>Back to Homepage</button></a>
                 <div class="error"><span>asdasd</span></div>

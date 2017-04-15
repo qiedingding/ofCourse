@@ -13,5 +13,5 @@ public interface SumrateDao {
 	public boolean update(Sumrate sumrate);
 	public boolean delete(Sumrate sumrate);
 	public boolean insert(Sumrate sumrate);
-	
+	public Sumrate findByCourseId( int courseId);
 }

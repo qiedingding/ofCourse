@@ -26,7 +26,7 @@ public class SumrateDaoImpl extends HibernateDaoSupport implements SumrateDao {
 
 	public ArrayList findAll() {
 		System.out.println("查看所有！！！！！！！！！！！！！");
-		String hql="from User";
+		String hql="from Sumrate";
 		ArrayList<Sumrate> list=(ArrayList<Sumrate>) super.getHibernateTemplate().find(hql);
 		return list;
 	}
@@ -49,7 +49,24 @@ public class SumrateDaoImpl extends HibernateDaoSupport implements SumrateDao {
 		});
 		return f;
 	}
+	public Sumrate findByCourseId(final int courseId) {
+		Sumrate f=(Sumrate) super.getHibernateTemplate().execute(new HibernateCallback() {
 
+			public Object doInHibernate(Session session)
+					throws HibernateException, SQLException {
+				// TODO Auto-generated method stub
+				String hql="from Sumrate as c where c.courseId="+courseId;
+				Query query=session.createQuery(hql);
+				List result=query.list();
+				if (result.size()>0) {
+					return result.get(0);
+				} else {
+					return null;
+				}
+			}			
+		});
+		return f;
+	}
 	public boolean update(Sumrate f) {
 		super.getHibernateTemplate().update(f);
 		return true;

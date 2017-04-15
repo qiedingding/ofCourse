@@ -17,6 +17,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 import edu.stevens.biz.CustomBiz;
 import edu.stevens.biz.UserBiz;
+import edu.stevens.dao.UserDao;
 import edu.stevens.entity.Custom;
 import edu.stevens.entity.User;
 
@@ -97,5 +98,37 @@ public class UserAction extends ActionSupport {
 		session.setAttribute("currentUser", u);
 		return "success";
 	}
+	
+	@Action(value = "loginOut", results = {
+			@Result(name = "success", location = "home.jsp"),
+			@Result(name = "fail", location = "register.jsp") })
+	public String loginOut() {
+		System.out.println("user logout");
+		HttpServletRequest request = ServletActionContext.getRequest();  
+		HttpSession session = request.getSession();  
+		session.setAttribute("currentUser", null);
+		return "success";
+	}
+	@Action(value = "userProfile", results = {
+			@Result(name = "success", location = "userProfile.jsp"),
+			@Result(name = "fail", location = "login.jsp") })
+	public String userProfile() {
+		HttpServletRequest request = ServletActionContext.getRequest();  
+		HttpSession session = request.getSession();  
+		user = (User) session.getAttribute("currentUser");
+		return "success";
+	}
+	@Action(value = "register", results = {
+			@Result(name = "success", location = "login.jsp"),
+			@Result(name = "fail", location = "login.jsp") })
+	public String register() {
+		boolean f = userBiz.register(user);
+		if(!f){
+			return "fail";
+		}
+		return "success";
+	}
+	
+	
 
 }

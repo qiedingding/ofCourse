@@ -11,6 +11,7 @@ public interface UserBiz {
 	public User findById(int id);
 	public boolean update(User user);
 	public boolean delete(User user);
+	public boolean register(User user);
 	public boolean validate_user(User user);
 	public User login(User user);
 }

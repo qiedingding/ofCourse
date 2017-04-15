@@ -49,6 +49,7 @@
 				<value>edu.stevens.entity.Degree</value>
 				<value>edu.stevens.entity.School</value>
 				<value>edu.stevens.entity.Major</value>
+				<value>edu.stevens.entity.Teacher</value>
 			</list>
 		</property>
 		<!-- 指定映射文件的路径，加载资源 -->

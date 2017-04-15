@@ -52,6 +52,10 @@ public class UserBizImpl implements UserBiz{
 		// TODO Auto-generated method stub
 		return userDao.findByUserNameAndPwd(user);
 	}
+	public boolean register(User user) {
+		user.setUserType(1);
+		return userDao.register(user);
+	}
 
 
 

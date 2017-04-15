@@ -97,8 +97,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 </head>
-<body>
- <!-- header -->
+<body> <!-- header -->
 
 	 <!-- header-bottom -->
 	<div class="header-bottom">
@@ -115,13 +114,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<!--/.navbar-header-->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-					 <li><a href="index.html" class="scroll">Major</a></li>
-						 <li><a href="#about" class="scroll">Course</a></li>
-						<li><a href="#gallery" class="scroll">Unisersity</a></li>
-						<li><a href="#contact" class="scroll">ContactUs</a></li>
-                        <li><a href="login.jsp" >Login</a></li>
-                        <li><a href="register.jsp">Register</a></li>
-                        
+						 <li><a href="home.jsp" >Home</a></li>
+						 <li><a href="courseListByTest">Course</a></li>
+						<li><a href="recommend.jsp">Recommend</a></li>
+						<li><a href="AboutUs.jsp">ContactUs</a></li>
+					<s:if test="null==#session.currentUser||#session.currentUser.isEmpty()">
+  							<li><a href="login.jsp" >Login</a></li>
+                        	<li><a href="register.jsp">Register</a></li>
+						</s:if>
+						<s:else>
+							<li><a href="userProfile" ><s:property value="#session.currentUser.userName" /></a></li>
+                        	<li><a href="loginOut">LogOut</a></li>
+						</s:else>
+						
+                      
 					</ul>
 				</div>
 				<!--/.navbar-collapse-->
@@ -158,10 +164,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<span class="hi-icon hi-icon-archive glyphicon glyphicon-wrench"> </span>
 						</div>
 						<div class="ser-rgt">
-							<h5>Wordpress</h5>
+							<h5>Xuan Li</h5>
 						</div>
 						<div class="clearfix"></div>
-							<p>Letraset sheets containing Lorem Ipsum passages.</p>
+							<p>Pic1.</p>
 				</div>
 				<div class="col-md-3 ser-left2">
 					<div class=" ser-lft">	
@@ -169,20 +175,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					
 					<div class="ser-rgt">
-						<h5>Lorem Ipsum</h5>
+						<h5>Ying Cui</h5>
 					</div>
 					<div class="clearfix"></div>
-					<p>Letraset sheets containing Lorem Ipsum passages.</p>
+					<p>Pic1.</p>
 				</div>
 				<div class="col-md-3 ser-left2">
 					<div class=" ser-lft">	
 						<span class="hi-icon hi-icon-archive glyphicon glyphicon-music"> </span>
 					</div>
 					<div class="ser-rgt">
-							<h5>Will Uncover</h5>
+							<h5>Xin Zou</h5>
 						</div>
 						<div class="clearfix"></div>
-					<p>Letraset sheets containing Lorem Ipsum passages.</p>
+					<p>Pic1.</p>
 				</div>
 				<div class="col-md-3 ser-left3">
 					<div class=" ser-lft">	
@@ -190,57 +196,41 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					
 					<div class="ser-rgt">
-						<h5>Alteration In</h5>
+						<h5>Bingling Xie</h5>
 					</div>
 					<div class="clearfix"></div>
-					<p>Letraset sheets containing Lorem Ipsum passages.</p>
+					<p>Pic1.</p>
 				</div>
 					<div class="clearfix"></div>
 			</div>
 			<div class="ser-btm">
 				<div class="col-md-3 ser-left">
-					<div class=" ser-lft">	
-						<span class="hi-icon hi-icon-archive glyphicon glyphicon-edit"> </span>
-					</div>
-					
-					<div class="ser-rgt">
-						<h5>Middle Of Text</h5>
-					</div>
+				
 					<div class="clearfix"></div>
-					<p>Letraset sheets containing Lorem Ipsum passages.</p>
+					<p>Address: 219 New York Ave, apt 5 ,07307, Jersey City, NJ
+Tel: 551-247-7786
+Email: xli100@stevens.edu</p>
 				</div>
 				<div class="col-md-3 ser-left">
-					<div class=" ser-lft">	
-						<span class="hi-icon hi-icon-archive glyphicon glyphicon-cog"> </span>
-					</div>
-					
-					<div class="ser-rgt">
-						<h5>Generate Lorem</h5>
-					</div>
+				
 					<div class="clearfix"></div>
-					<p>Letraset sheets containing Lorem Ipsum passages.</p>
+					<p>Address: 219 New York Ave, apt 5 ,07307, Jersey City, NJ
+Tel: 551-247-7786
+Email: xli100@stevens.edu</p>
 				</div>
 				<div class="col-md-3 ser-left">
-					<div class=" ser-lft">	
-						<span class="hi-icon hi-icon-archive glyphicon glyphicon-screenshot"> </span>
-					</div>
-					
-					<div class="ser-rgt">
-						<h5>Making This</h5>
-					</div>
+				
 					<div class="clearfix"></div>
-					<p>Letraset sheets containing Lorem Ipsum passages.</p>
+					<p>Address: 219 New York Ave, apt 5 ,07307, Jersey City, NJ
+Tel: 551-247-7786
+Email: xli100@stevens.edu</p>
 				</div>
 				<div class="col-md-3 ser-left1">
-					<div class=" ser-lft">	
-						<span class="hi-icon hi-icon-archive glyphicon glyphicon-print"> </span>
-					</div>
-					
-					<div class="ser-rgt">
-						<h5>Even Slightly</h5>
-					</div>
+				
 					<div class="clearfix"></div>
-					<p>Letraset sheets containing Lorem Ipsum passages.</p>
+					<p>Address: 219 New York Ave, apt 5 ,07307, Jersey City, NJ
+Tel: 551-247-7786
+Email: xli100@stevens.edu</p>
 				</div>
 					<div class="clearfix"></div>
 			</div>
@@ -250,135 +240,72 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- /services -->
 
 
-<!-- clients -->
-<div class="client" id="clients">
-		<div class="container">
-			<h3>Clients</h3>
-			<div class="nbs-flexisel-container"><div class="nbs-flexisel-inner"><div class="nbs-flexisel-container"><div class="nbs-flexisel-inner"><ul id="flexiselDemo1" class="nbs-flexisel-ul" style="left: -162.857142857143px; display: block;">			
-					
-					
-					
-					<li class="nbs-flexisel-item" style="width: 162.857142857143px;">
-						<div class="sliderfig-grid">
-							<img src="images/3.png" alt=" " class="img-responsive">
-						</div>
-					</li>
-					<li class="nbs-flexisel-item" style="width: 162.857142857143px;">
-						<div class="sliderfig-grid">
-							<img src="images/Stevens.jpg" alt=" " class="img-responsive">
-						</div>
-					</li>
-					<li class="nbs-flexisel-item" style="width: 162.857142857143px;">
-						<div class="sliderfig-grid">
-							<img src="images/6.png" alt=" " class="img-responsive">
-						</div>
-					</li>
-					<li class="nbs-flexisel-item" style="width: 162.857142857143px;">
-						<div class="sliderfig-grid">
-							<img src="images/7.png" alt=" " class="img-responsive">
-						</div>
-					</li>
-					<li class="nbs-flexisel-item" style="width: 162.857142857143px;">
-						<div class="sliderfig-grid">
-							<img src="images/Stevens.jpg" alt=" " class="img-responsive">
-						</div>
-					</li>
-					<li class="nbs-flexisel-item" style="width: 162.857142857143px;">
-						<div class="sliderfig-grid">
-							<img src="images/r.jpg" alt=" " class="img-responsive">
-						</div>
-					</li>
-					
-					
-					<li class="nbs-flexisel-item" style="width: 162.857142857143px;">
-						<div class="sliderfig-grid">
-							<img src="images/r1.jpg" alt=" " class="img-responsive">
-						</div>
-					</li><li class="nbs-flexisel-item" style="width: 162.857142857143px;">
-						<div class="sliderfig-grid">
-							<img src="images/r.jpg" alt=" " class="img-responsive">
-						</div>
-					</li><li class="nbs-flexisel-item" style="width: 162.857142857143px;">
-						<div class="sliderfig-grid">
-							<img src="images/Stevens.jpg " alt=" " class="img-responsive">
-						</div>
-					</li><li class="nbs-flexisel-item" style="width: 162.857142857143px;">
-						<div class="sliderfig-grid">
-							<img src="images/r1.jpg" alt=" " class="img-responsive">
-						</div>
-					</li>	<li class="nbs-flexisel-item" style="width: 162.857142857143px;">
-						<div class="sliderfig-grid">
-							<img src="images/Stevens.jpg" alt=" " class="img-responsive">
-						</div>
-					</li><li class="nbs-flexisel-item" style="width: 162.857142857143px;">
-						<div class="sliderfig-grid">
-							<img src="images/r1.jpg" alt=" " class="img-responsive">
-						</div>
-					</li>	<li class="nbs-flexisel-item" style="width: 162.857142857143px;">
-						<div class="sliderfig-grid">
-							<img src="images/Stevens.jpg" alt=" " class="img-responsive">
-						</div>
-					</li><li class="nbs-flexisel-item" style="width: 162.857142857143px;">
-						<div class="sliderfig-grid">
-							<img src="images/r1.jpg" alt=" " class="img-responsive">
-						</div>
-					</li>	<li class="nbs-flexisel-item" style="width: 162.857142857143px;">
-						<div class="sliderfig-grid">
-							<img src="images/Stevens.jpg" alt=" " class="img-responsive">
-						</div>
-					</li></ul><div class="nbs-flexisel-nav-left" style="top: -33px;"></div><div class="nbs-flexisel-nav-right" style="top: -33px;"></div></div></div>
-<div class="nbs-flexisel-nav-left" style="top: 27.5px;"></div><div class="nbs-flexisel-nav-right" style="top: 27.5px;"></div></div></div>
-					<script type="text/javascript">
-							$(window).load(function() {
-								$("#flexiselDemo1").flexisel({
-									visibleItems: 7,
-									animationSpeed: 1000,
-									autoPlay: true,
-									autoPlaySpeed: 3000,    		
-									pauseOnHover: true,
-									enableResponsiveBreakpoints: true,
-									responsiveBreakpoints: { 
-										portrait: { 
-											changePoint:480,
-											visibleItems: 2
-										}, 
-										landscape: { 
-											changePoint:640,
-											visibleItems:3
-										},
-										tablet: { 
-											changePoint:768,
-											visibleItems: 3
-										}
-									}
-								});
-								
-							});
-					</script>
-					<script type="text/javascript" src="js/jquery.flexisel.js"></script>
-
-
-
-		</div>
-	</div>
-<!-- /clients -->
 <!-- news -->
 	<div class="our" id="news">
 	<div class="container">
 		<h3>Our Updates</h3>
 		<div class="col-md-4 our-tp">
 			<div class="ou-lft">
-				<span>16
-				/04</span>
+				<span>05
+				/18</span>
 			</div>
 			<div class="ou-rgt">
-				<p>First version of f</p>
+				<p>First version of ofCurse system.In this week, we have a group meeting. In this meeting, we have made some progress about our project.</p>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
-	
-	
-			
+	<div class="col-md-4 our-tp">
+			<div class="ou-lft">
+				<span>05
+				/25</span>
+			</div>
+			<div class="ou-rgt">
+				<p>In this week, we collect data about user demand information.This survey is conduct in last week. We write the user story based on this survey. We also design the system structs.</p>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	<div class="col-md-4 our-tp">
+			<div class="ou-lft">
+				<span>06
+				/02</span>
+			</div>
+			<div class="ou-rgt">
+				<p>In this week, we have some group meeting talk about the databse design. The we desgin the database as followings(ER design).</p>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+			<div class="col-md-4 our-tp">
+			<div class="ou-right">
+				<span>06
+				/08</span>
+			</div>
+			<div class="ou-rgt">
+				<p>In this week, we have designed the low fidelity website interface.</p>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="col-md-4 our-tp">
+			<div class="ou-lft">
+				<span>06
+				/15</span>
+			</div>
+			<div class="ou-rgt">
+				<p>By using SSH (struts, spring framework and hibernate), we design the basic structure for the subject, 
+
+the functions and layers. </p>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="col-md-4 our-tp">
+			<div class="ou-lft">
+				<span>06
+				/22</span>
+			</div>
+			<div class="ou-rgt">
+				<p>In this week, we try to implements some interface we defined in last week. In other words, we try to write some real codes to make our project have more functions. </p>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
 	</div>
 </div>
 <!-- /news -->

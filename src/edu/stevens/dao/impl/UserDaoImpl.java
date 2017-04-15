@@ -99,6 +99,11 @@ public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
 		return u;
 	}
 
+	public boolean register(User user) {
+		super.getHibernateTemplate().save(user);
+		return true;
+	}
+
 	
 
 }
